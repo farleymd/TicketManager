@@ -88,7 +88,22 @@ public class TicketManager extends JFrame {
         resolveTicketButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                Ticket resolvedTicket = TicketManager.this.ticketList.getSelectedValue();
+                String resolution = JOptionPane.showInputDialog("How was this issue resolved?");
+                Date resolvedDate = new Date();
 
+                resolvedTicket.setResolution(resolution);
+                resolvedTicket.setResolutionDate(resolvedDate);
+
+                TicketManager.this.ticketListModel.removeElement(resolvedTicket);
+
+            }
+        });
+
+        quitButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
             }
         });
 
