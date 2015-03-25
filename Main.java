@@ -1,4 +1,4 @@
-package Marty.company;
+//package Marty.company;
 
 import java.io.*;
 import java.text.DateFormat;
@@ -9,6 +9,9 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) throws IOException {
+        TicketManager ticketManager = new TicketManager();
+
+
         LinkedList<Ticket> ticketQueue = new LinkedList<Ticket>();
         LinkedList<Ticket> resolvedTicket = new LinkedList<Ticket>();
 
