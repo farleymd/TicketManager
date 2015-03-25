@@ -23,9 +23,9 @@ public class TicketManager extends JFrame {
 
     DefaultListModel<Ticket> ticketListModel;
 
-    final String high = "1";
-    final String medium = "2";
-    final String low = "3";
+    final String high = "1: High";
+    final String medium = "2: Medium";
+    final String low = "3: Low";
 
 
     public TicketManager(){
@@ -45,9 +45,13 @@ public class TicketManager extends JFrame {
         priorityCombo.addItem(medium);
         priorityCombo.addItem(low);
 
+        //TODO READ EXISTING TICKETS FROM FILE
+
         addTicketButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //TODO PRIORITIZE TICKETS BY PRIORITY
+
                 String description = problemText.getText();
                 String reporter = reportedByText.getText();
                 int priority = 0;
@@ -105,6 +109,8 @@ public class TicketManager extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 System.exit(0);
             }
+
+            //TODO WRITE TICKETS TO FILE
         });
 
     }
