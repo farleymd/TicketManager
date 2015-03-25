@@ -36,6 +36,7 @@ public class TicketManager extends JFrame {
         setVisible(true);
         setSize(new Dimension(300,500));
 
+
         ticketListModel = new DefaultListModel<Ticket>();
         ticketList.setModel(ticketListModel);
         ticketList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
@@ -68,6 +69,30 @@ public class TicketManager extends JFrame {
             }
         });
 
+        clearFieldsButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                problemText.setText("");
+                reportedByText.setText("");
+            }
+        });
+
+        deleteTicketButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Ticket toDelete = TicketManager.this.ticketList.getSelectedValue();
+                TicketManager.this.ticketListModel.removeElement(toDelete);
+            }
+        });
+
+        resolveTicketButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+
     }
+
 
 }

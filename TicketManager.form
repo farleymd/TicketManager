@@ -30,7 +30,9 @@
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <text value="Describe the problem here"/>
+        </properties>
       </component>
       <component id="302a4" class="javax.swing.JTextField" binding="reportedByText">
         <constraints>
@@ -38,7 +40,9 @@
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <text value="Who reported this issue?"/>
+        </properties>
       </component>
       <component id="2ad22" class="javax.swing.JComboBox" binding="priorityCombo">
         <constraints>
